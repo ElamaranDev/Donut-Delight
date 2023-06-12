@@ -1,0 +1,154 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: floralwhite;
+    /*#D3155D*/
+    width: 100%;
+}
+
+
+.header{
+    height: 85px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.header_logo p{
+    font-size: 30px;
+    padding-left: 30px;
+    margin-top: 20px;
+    width: 190px;
+    color: #D3155D;
+}
+
+.navigation_bar {
+    margin-left: 400px;
+}
+.navigation_bar ul{
+    list-style: none;
+    display: flex;
+    margin-top: 32px;
+
+}
+.navigation_bar a{
+    text-decoration: none;
+    padding: 8px;
+    font-size: 15px;
+    font-weight:bold;
+    margin-right: 60px;
+    color: black;
+}
+
+.takeaway-button {
+    background-color: #D3155D;
+    padding: 8px 16px;
+    color: #FFFFFF !important;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+.section-1 img{
+    width: 1280px;
+}
+
+
+
+
+
+
+
+/*Section - 1 Sliding Images
+.section-1{
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+}
+
+/*Slide Animation Starts
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.image-slider{
+    width: 3600px;
+    height: 600px;
+    margin:  0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.image{
+    height: 600px;
+
+}
+.image-container{
+    height: 800px;
+    width: 1000px;
+    position: relative;
+    float: left;
+}
+.image-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*Slide Animation Ends*/
+
+.takeway-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .takeway-section a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #D3155D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .takeway-section a i {
+    margin-right: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 150px;
+  }
+  
+  .cards > div {
+    flex-basis: calc(33.33% - 120px);
+    margin: 10px 0px;
+  }
+  
+  
+  .cards .image-box img {
+    width: 85px;
+  }
+  .cards .content-box {
+    margin-left: -20px;
+  }
+  
