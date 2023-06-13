@@ -130,12 +130,12 @@ header .navigations{
     font-weight: bold;
     width: 250px;
 }
-.menu-category:hover{
-    background-color: rgb(241, 241, 241);
+.menu-category:active{
+    background-color: rgb(215, 215, 215);
 }
 .menu-category-count{
     padding: 4px 6px;
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(237, 237, 237);
     border-radius: 20px;
 }
 .heading img{
@@ -152,6 +152,9 @@ header .navigations{
     padding: 1rem;
     background-color: rgb(243, 243, 243);
     width: 300px;
+}
+.active{
+    background-color: rgb(215, 215, 215);
 }
 main{
     display: flex;

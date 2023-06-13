@@ -16,13 +16,13 @@
             <div class="header_logo">
                 <p>Donut Delight</p>
             </div>
-            <div class="navigation_bar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li><a href="#" class="takeaway-button">Takeaway</a></li>
+            <div class="navigation-bar">
+                <ul class="navigation-bar-items">
+                    <li id="home">Home</li>
+                    <li id="about-us">About Us</li>
+                    <li id="menu">Menu</li>
+                    <li id="feedback">Feedback</li>
+                    <li id="takeaway-button">Takeaway</li>
                 </ul>
             </div>  
         </div>
@@ -35,25 +35,25 @@
             <a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
         </div>
         <div class="card">
-            <div class="card-1">
+            <div class="card-item">
                 <div class="image-box">
-                    <img src="images/egg.webp" alt="">
+                    <img class="image" src="images/egg.webp" alt="">
                 </div>
                 <div class="content-box">
                     <p>100% Eggless Donuts</p>
                 </div>
             </div>
-            <div class="card-2">
+            <div class="card-item">
                 <div class="image-box">
-                    <img src="images/coffee.webp" alt="">
+                    <img class="image" src="images/coffee.webp" alt="">
                 </div>
                 <div class="content-box">
                     <p>Finest Coffee Range</p>
                 </div>
             </div>
-            <div class="card-3">
+            <div class="card-item">
                 <div class="image-box">
-                    <img src="images/coffee_with_donut.jpg" alt="">
+                    <img class="image" src="images/coffee_with_donut.jpg" alt="">
                 </div>
                 <div class="content-box">
                     <p>20+ Exciting Combos</p>
@@ -66,7 +66,7 @@
     </section>
     <section class="section-4">
         <h1>Discover the Menu</h1>
-        <section class="cards">
+        <div class="cards">
             <div class="card-4">
                 <img src="/images/Section-1-Image-2.png" alt="">
                 <div class="content">
@@ -97,7 +97,8 @@
                     <p>Cold Beverages</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
                 </div>
             </div>   
-        </section>
+        </div>
+    </section>
         <footer>
             <div class="footer-content">
               <h2>Donut Delight</h2>
@@ -112,9 +113,6 @@
               <p>© 2023 Donut Delight. All rights reserved.</p>
             </div>
           </footer>
-          
-          
-    </section>
     <script src="dashboard.js"></script>
 </body>
 </html>
