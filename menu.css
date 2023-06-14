@@ -121,7 +121,8 @@ header .navigations{
     height: 100vh;
     left: 0;
     top: 85px;
-    z-index: 1000;
+    z-index: 99999;
+    background-color: white;
 }
 .menu-categories{
     position: absolute;
