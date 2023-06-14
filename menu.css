@@ -113,6 +113,7 @@ header .navigations{
     }
 }
 
+
 .side-bar{
     display: flex;
     flex-direction: column;
@@ -124,6 +125,7 @@ header .navigations{
     z-index: 99999;
     background-color: white;
 }
+
 .menu-categories{
     position: absolute;
     display: flex;
@@ -236,3 +238,11 @@ main{
  .add-btn:hover{
     opacity: 0.8;
  }
+ @media (max-width: 890px) {
+    .side-bar{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+}
