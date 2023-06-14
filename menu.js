@@ -133,7 +133,7 @@ function addToCategory5(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn">ADD</button>
+                      <button id="img1-add-btn" class="add-btn add-to-cart-btn">ADD</button>
                   </div>`;
    }
   });
@@ -146,6 +146,18 @@ addToCategory3();
 addToCategory4();
 addToCategory5();
 
-//finished
+//Adding items to cart
+const cartCount = document.querySelector('.cart-count');
+let count = 0;
+document.querySelectorAll('.add-btn')
+ .forEach((button, index) => {
+    button.addEventListener('click', () => {
+        count += 1;
+        button.innerHTML = "ADDED";
+        cartCount.innerHTML = count;
+    });
+});
+
+
 
 

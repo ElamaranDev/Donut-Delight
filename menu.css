@@ -66,6 +66,20 @@ header .navigations{
     height: 25px;
     cursor: pointer;   
 }
+.cart{
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    padding: 3px 8px;
+    background-color: white;
+    color: #df1883;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
 .profile-icon{
     height: 25px;
     margin-left: 20px;
@@ -113,7 +127,7 @@ header .navigations{
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-top: 10;
+    margin-top: 10px;
     top: 0px;
     right: 0px;
     list-style-type: none;
@@ -198,7 +212,7 @@ main{
     width: 420px ;
  }
  .donut-image{
-    height: 250px;
+    height: 300px;
     margin-bottom: 20px;
     border-radius: 15px;
  }

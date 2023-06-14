@@ -3,87 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
-    <title>Donut Delight | Menu</title>
+    <title>Donut Delight | Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <p class="logo-name">Donut Delight</p>
+    <section class="header">
+        <div class="header_logo">
+          Donut Delight
         </div>
-        <div class="search">
-            <input 
-             type="text"
-             class="search-bar"
-             placeholder="Search menu items,categories here">
-             <svg class="search-icon" style="width: 24px; height: 24px;" viewBox="0 0 24 24">
-                <path 
-                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z">
-                </path>
-            </svg>
-        </div>
-        <div class="navigations">
-            <div class="cart">
-               <img class="cart-icon" src="icons/cart-white-icon.png" alt="cart icon">
-            </div>
-            <div class="profile">
-                <img class="profile-icon" src="icons/profile-icon.png" alt="profile icon">
-            </div>
-        </div>
-    </header>
-    <div class="side-bar">
-        <ul id="menu-list" class="menu-categories">
-          <li class="heading" id="heading">
-            <img id="menu-icon" src="icons/menu-icon.png" alt="menu icon">
-            <span>Menu Categories</span>
-          </li>
-          <li class="menu-category" data-target="donut-combos">
-            <span class="menu-category-name">DONUT COMBOS</span>
-            <span class="menu-category-count">6</span>
-          </li>
-          <li class="menu-category" data-target="sandwiches-and-bakery">
-            <span class="menu-category-name">SANDWICHES AND BAKERY</span>
-            <span class="menu-category-count">12</span>
-          </li>
-          <li class="menu-category" data-target="donuts">
-            <span class="menu-category-name">DONUTS</span>
-            <span class="menu-category-count">22</span>
-          </li>
-          <li class="menu-category" data-target="hot-beverages">
-            <span class="menu-category-name">HOT BEVERAGES</span>
-            <span class="menu-category-count">15</span>
-          </li>
-          <li class="menu-category" data-target="cold-beverages">
-            <span class="menu-category-name">COLD BEVERAGES</span>
-            <span class="menu-category-count">16</span>
-          </li>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="navigation-bar-items">
+          <li id="home">Home</li>
+          <li id="about-us">About-Us</li>
+          <li id="menu">Menu</li>
+          <li id="feedback">Feedback</li>
+          <li id="takeaway-button">Takeaway</li>
         </ul>
-    </div>
-    <main>
-        <div class="contents">
-            <div class="donut-combos-div">
-                <div id="donut-combos" class="category-header">Donut Combos</div>
-                <div class="category-elements js-donut-combos"></div>
+    </section>
+    <section class="section-1">
+        <img src="images/Section-1-Image-1.png" alt="">
+    </section>
+    <section class="section-2">
+        <div class="takeway-section">
+            <a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+        </div>
+        <div class="card">
+            <div class="card-item">
+                <div class="image-box">
+                    <img class="image" src="images/egg.webp" alt="">
+                </div>
+                <div class="content-box">
+                    <p>100% Eggless Donuts</p>
+                </div>
             </div>
-            <div class="sandwiches-and-bakery-div">
-                <div id="sandwiches-and-bakery" class="category-header">sandwiches and Bakery</div>
-                <div class="category-elements js-sandwiches-and-bakery"></div>
+            <div class="card-item">
+                <div class="image-box">
+                    <img class="image" src="images/coffee.webp" alt="">
+                </div>
+                <div class="content-box">
+                    <p>Finest Coffee Range</p>
+                </div>
             </div>
-            <div class="donuts-div">
-                <div id="donuts" class="category-header">Donuts</div>
-                <div class="category-elements js-donuts"></div>
-            </div>
-            <div class="hot-beverages-div">
-                <div id="hot-beverages" class="category-header">Hot Beverages</div>
-                <div class="category-elements js-hot-beverages"></div>
-            </div>
-            <div class="cold-beverages-div">
-                <div id="cold-beverages" class="category-header">Cold Beverages</div>
-                <div class="category-elements js-cold-beverages"> </div>
+            <div class="card-item">
+                <div class="image-box">
+                    <img class="image" src="images/coffee_with_donut.jpg" alt="">
+                </div>
+                <div class="content-box">
+                    <p>20+ Exciting Combos</p>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+    <section class="section-3">
+        <img src="images/Section-1-Image-4.png" alt="">
+    </section>
+    <section class="section-4">
+        <h1>Discover the Menu</h1>
+        <div class="cards">
+            <div class="card-4">
+                <img src="/images/Section-1-Image-2.png" alt="">
+                <div class="content">
+                    <p>Donut Packs</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+                </div>
+            </div>
+            <div class="card-4">
+                <img src="/images/Section-1-Image-2.png" alt="">
+                <div class="content">
+                    <p>Sandwiches</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+                </div>
+            </div>
+            <div class="card-4">
+                <img src="/images/Section-1-Image-2.png" alt="">
+                <div class="content">
+                    <p>Donuts</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+                </div>
+            </div>
+            <div class="card-4">
+                <img src="/images/Section-1-Image-2.png" alt="">
+                <div class="content">
+                    <p>Hot Beverages</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+                </div>
+            </div>
+            <div class="card-4">
+                <img src="/images/Section-1-Image-2.png" alt="">
+                <div class="content">
+                    <p>Cold Beverages</p><a href=""><i class="fa fa-shopping-cart"></i>Takeaway</a>
+                </div>
+            </div>   
+        </div>
+    </section>
+        <footer>
+            <div class="footer-content">
+              <h2>Donut Delight</h2>
+              <p>1234 Donut Street, Donutville, DN 12345</p>
+              <div class="social-icons">
+                <a href="#" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="btn btn-twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="btn btn-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>© 2023 Donut Delight. All rights reserved.</p>
+            </div>
+          </footer>
+    <script src="dashboard.js"></script>
 </body>
-<script src="data/Menuitems.js"></script>
-<script src="menu.js"></script>
 </html>
