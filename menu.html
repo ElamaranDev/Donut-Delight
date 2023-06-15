@@ -40,48 +40,69 @@
           </li>
           <li class="menu-category" data-target="donut-combos">
             <span class="menu-category-name">DONUT COMBOS</span>
-            <span class="menu-category-count">6</span>
+            <span id="donut-combos-count" class="menu-category-count">6</span>
           </li>
           <li class="menu-category" data-target="sandwiches-and-bakery">
             <span class="menu-category-name">SANDWICHES AND BAKERY</span>
-            <span class="menu-category-count">12</span>
+            <span id="sandwiches-and-bakery-count" class="menu-category-count">8</span>
           </li>
           <li class="menu-category" data-target="donuts">
             <span class="menu-category-name">DONUTS</span>
-            <span class="menu-category-count">22</span>
+            <span id="donuts-count" class="menu-category-count">15</span>
           </li>
           <li class="menu-category" data-target="hot-beverages">
             <span class="menu-category-name">HOT BEVERAGES</span>
-            <span class="menu-category-count">15</span>
+            <span id="hot-beverages-count" class="menu-category-count">8</span>
           </li>
           <li class="menu-category" data-target="cold-beverages">
             <span class="menu-category-name">COLD BEVERAGES</span>
-            <span class="menu-category-count">16</span>
+            <span id="cold-beverages-count" class="menu-category-count">8</span>
           </li>
         </ul>
     </div>
     <main>
         <div class="contents">
+            <div class="no-items">
+                <div class="no-items-message">
+                    <img id="no-items-image" src="images/no-items-found.png" alt="No Item Found">
+                    <span>No Items Found</span>
+                    <span>your search list is empty..!</span>
+                </div>
+            </div>
             <div class="donut-combos-div">
                 <div id="donut-combos" class="category-header">Donut Combos</div>
-                <div class="category-elements js-donut-combos"></div>
+                <div class="category-elements js-donut-combos">
+                    <!-- contains all the items in this category -->
+                    <!-- div is category-element -->
+                </div>
             </div>
             <div class="sandwiches-and-bakery-div">
                 <div id="sandwiches-and-bakery" class="category-header">sandwiches and Bakery</div>
-                <div class="category-elements js-sandwiches-and-bakery"></div>
+                <div class="category-elements js-sandwiches-and-bakery">
+                     <!-- contains all the items in this category -->
+                     <!-- div is category-element -->
+                </div>
             </div>
             <div class="donuts-div">
                 <div id="donuts" class="category-header">Donuts</div>
-                <div class="category-elements js-donuts"></div>
+                <div class="category-elements js-donuts">
+                     <!-- contains all the items in this category -->
+                     <!-- div is category-element -->
+                </div>
             </div>
             <div class="hot-beverages-div">
                 <div id="hot-beverages" class="category-header">Hot Beverages</div>
-                <div class="category-elements js-hot-beverages"></div>
+                <div class="category-elements js-hot-beverages">
+                     <!-- contains all the items in this category -->
+                     <!-- div is category-element -->
+                </div>
             </div>
             <div class="cold-beverages-div">
                 <div id="cold-beverages" class="category-header">Cold Beverages</div>
-                <div class="category-elements js-cold-beverages"> </div>
-            </div>
+                <div class="category-elements js-cold-beverages">
+                     <!-- contains all the items in this category -->
+                     <!-- div is category-element -->
+                </div>
         </div>
     </main>
 </body>
