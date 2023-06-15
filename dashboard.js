@@ -1,6 +1,6 @@
 const menubtn = document.querySelector('#menu');
 menubtn.addEventListener('click', function() {
-  window.location.href ="index.html";
+  window.location.href ="menu.html";
   console.log("menu button clicked")
 });
 window.addEventListener('scroll', function() {
