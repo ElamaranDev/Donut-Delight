@@ -263,3 +263,62 @@ main{
         margin-left: 0;
     }
 }
+@media (max-width: 475px){
+    header{
+        display: flex;
+        align-items: center;
+    }
+    header .logo{
+        font-size: 15px;
+        width: 60px;
+        padding: 10px;
+    }
+    header .search{
+        flex: 1;
+        padding: 0.4rem 0.65rem;
+        max-width: 120px;
+    }
+    .search .search-bar{
+        display: flex;
+        max-width: 90px;
+        flex: 1;
+        font-size: 0.8rem;
+        height: 10px;
+    }
+    header .navigations{
+        padding: 5px;
+        justify-content: space-around;
+    }
+    .cart-icon{
+        height: 20px;
+    }
+    .profile-icon{
+        height: 25px;
+        margin-left: 5px;
+        padding: 5px;
+    }
+    .category-header{
+        height: 10px;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+     }
+    .donut-image{
+        height: 150px;
+        width: 250px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+     }
+     .product-name-price{
+        font-size: 1rem;
+     }
+     .add-btn{
+        padding: 0.5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #df1883;
+     }
+}
