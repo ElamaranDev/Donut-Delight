@@ -175,17 +175,33 @@ header .navigations{
 }
 main{
     display: flex;
-    height: auto;
+    min-height: 380px;
     margin-left: 380px;
     margin-top: 85px;
 }
-
  main .contents{
     display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
     margin: 20px 20px 20px 20px;
+ }
+ .no-items{
+    display: none;
+    margin: auto 0;
+    margin-top: 150px;
+ }
+ #no-items-image{
+    height: 200px;
+    opacity: 0.6;
+ }
+ .no-items-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: rgb(117, 117, 117);
  }
 .category-header{
     display: flex;
@@ -208,6 +224,7 @@ main{
  .category-element{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 20px 10px 10px 10px;
     padding: 1rem;
     box-shadow: 0 0 15px #df188223;
@@ -216,6 +233,7 @@ main{
  }
  .donut-image{
     height: 300px;
+    width: 420px;
     margin-bottom: 20px;
     border-radius: 15px;
  }
