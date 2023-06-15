@@ -364,6 +364,9 @@ color: #503b36;
     }
   .header_logo{
       margin-left: 0;
+      font-size: 18px;
+      padding-left: 10px;
+      justify-content: flex-start;
   }
   .navigation-bar-items {
     position: absolute;
