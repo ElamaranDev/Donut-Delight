@@ -269,14 +269,14 @@ main{
         align-items: center;
     }
     header .logo{
-        font-size: 15px;
+        font-size: 20px;
         width: 60px;
         padding: 10px;
     }
     header .search{
         flex: 1;
         padding: 0.4rem 0.65rem;
-        max-width: 120px;
+        max-width: 180px;
     }
     .search .search-bar{
         display: flex;
@@ -290,7 +290,7 @@ main{
         justify-content: space-around;
     }
     .cart-icon{
-        height: 20px;
+        height: 25px;
     }
     .profile-icon{
         height: 25px;
