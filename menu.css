@@ -91,29 +91,6 @@ header .navigations{
 .profile-icon:hover{
     background-color: rgb(241, 241, 241);
 }
-@media (max-width: 720px) {
-    header .navigations {
-        margin-left: 0px;
-    }
-    header .search{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    header .navigations{
-        margin-right: 0;
-    }
-    header .logo{
-        margin-left: 0;
-    }
-}
-@media(min-width: 450px){
-    .search{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-}
-
-
 .side-bar{
     display: flex;
     flex-direction: column;
@@ -262,8 +239,40 @@ main{
     main{
         margin-left: 0;
     }
+    header .logo{
+        justify-content: flex-start;
+        font-size: 28px;
+    }
+    header .search{
+        flex: 1;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0.75rem 1rem;
+    }
+    header .navigations{
+        margin-left: 70px;
+    }
 }
-@media (max-width: 475px){
+@media (max-width: 775px){
+    header .search{
+        flex: 1;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0.75rem 1rem;
+    }
+    header .navigations{
+        padding: 5px;
+        justify-content: space-around;
+        margin-left: 10px;
+    }
+    header .logo{
+        font-size: 20px;
+        width: 130px;
+        padding: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 575px){
     header{
         display: flex;
         align-items: center;
@@ -272,12 +281,13 @@ main{
         font-size: 20px;
         width: 60px;
         padding: 10px;
+        margin-left: 10px;
     }
     header .search{
         flex: 1;
         padding: 0.4rem 0.65rem;
-        max-width: 160px;
-        margin-left: 20px;
+        margin-right: 0;
+        margin-left: 0;
     }
     .search .search-bar{
         display: flex;
@@ -289,6 +299,8 @@ main{
     header .navigations{
         padding: 5px;
         justify-content: space-around;
+        margin-left: 0;
+        margin-right: 10px;
     }
     .cart-icon{
         height: 25px;

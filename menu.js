@@ -52,7 +52,7 @@ function addToCategory1(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -72,7 +72,7 @@ function addToCategory2(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -92,7 +92,7 @@ function addToCategory3(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -113,7 +113,7 @@ function addToCategory4(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -130,10 +130,10 @@ function addToCategory5(){
                   <div data-category=${item.category} class="category-element">
                       <img id="donut-combo-img-1" class="donut-image" src="${item.image}" alt="">
                       <div class="product-name-price">
-                          <span data-item-name="item-name" class="product-name">${item.name}</span>
+                          <span class="product-name">${item.name}</span>
                           <span data-item-price="item-price" class="product-price">₹${item.price}</span>
                       </div>
-                      <button id="img1-add-btn" class="add-btn add-to-cart-btn">ADD</button>
+                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn add-to-cart-btn">ADD</button>
                   </div>`;
    }
   });
@@ -145,26 +145,6 @@ addToCategory2();
 addToCategory3();
 addToCategory4();
 addToCategory5();
-
-// // Adding event listener to search bar
-// const inputItem = document.querySelector('.search-bar');
-// const categorySegment = document.querySelector('.category-elements');
-// const MenuItemsList = document.querySelectorAll('.category-element');
-// const productNames = document.querySelectorAll('.product-name');
-// inputItem.addEventListener('input', searchItem);
-
-// // Search items in menu
-// function searchItem() {
-//   const searchItem = inputItem.value.toLowerCase();
-//   productNames.forEach((productName, index) => {
-//     const textContent = productName.textContent.toLowerCase();
-//     if (textContent.includes(searchItem)) {
-//       MenuItemsList[index].style.display = 'block';
-//     } else {
-//       MenuItemsList[index].style.display = 'none';
-//     }
-//   });
-// }
 
 // Adding event listener to search bar
 const inputItem = document.querySelector('.search-bar');
@@ -270,15 +250,39 @@ function hideEmptyCategoryDivs() {
 
 //Adding items to cart
 const cartCount = document.querySelector('.cart-count');
-let count = 0;
 document.querySelectorAll('.add-btn')
  .forEach((button, index) => {
     button.addEventListener('click', () => {
-        count += 1;
         button.innerHTML = "ADDED";
-        cartCount.innerHTML = count;
+        const addedItem = button.dataset.itemName;
+        
+        let matchingItem;
+        cartItems.forEach((item) => {
+            if(addedItem === item.productName)
+            {
+                matchingItem = item;
+            }
+        });
+        if(matchingItem){
+          matchingItem.quantity += 1;
+        }
+        else {
+          cartItems.push({
+            productName : addedItem,
+            quantity : 1
+          });
+        }
+        updateCartQuantity(); 
     });
 });
+function updateCartQuantity(){
+  const cartCount = document.querySelector('.cart-count');
+    let quantity = 0;
+    cartItems.forEach( item => {
+     quantity += item.quantity;
+    });
+    cartCount.innerHTML = quantity;
+}
 
 
 
