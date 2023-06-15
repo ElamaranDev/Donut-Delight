@@ -281,6 +281,8 @@ main{
     }
     .search .search-bar{
         display: flex;
+        flex: 1;
+        max-width: 110px;
         font-size: 0.8rem;
         height: 10px;
     }
