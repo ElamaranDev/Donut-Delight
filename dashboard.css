@@ -1,7 +1,7 @@
 body{
   padding: 0;
   margin: 0;
-  margin-top: 65px;
+  margin-top: 85px;
   background-color: floralwhite;
   /*#D3155D*/
   width: 100%;
@@ -105,50 +105,7 @@ body{
   transform: rotate(-405deg);
 }
 
-@media (max-width: 765px) {
-  .menu-button-container {
-    display: flex;
-    margin-right: 1rem;
-  }
-  .header_logo{
-      margin-left: 0;
-  }
-  .navigation-bar-items {
-    position: absolute;
-    top: 35px;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .navigation-bar-items li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .navigation-bar-items li {
-    border: 1px solid #a91263;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .navigation-bar-items > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #df1883;
-  }
-  .navigation-bar-items > li:not(:last-child) {
-    border-bottom: 1px solid #8e0f53;
-  }
-}
+
 .takeaway-button {
   background-color: #ffffff;
   padding: 8px 16px;
@@ -311,6 +268,7 @@ align-items: center;
 
 .card-4 img{
 width: 350px;
+height: 250px;
 border-radius: 15px;
 }
 
@@ -388,5 +346,59 @@ margin-right: 10px;
 font-weight: bold;
 font-size: 18px;
 color: #503b36;
+}
+
+@media (max-width: 765px) {
+  .section-4 h1 {
+    font-size: 2rem;
+  }
+
+  .menu-button-container {
+    display: flex;
+    margin-right: 1rem;
+  }
+  .card-4 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    }
+  .header_logo{
+      margin-left: 0;
+  }
+  .navigation-bar-items {
+    position: absolute;
+    top: 35px;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .navigation-bar-items li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .navigation-bar-items li {
+    border: 1px solid #a91263;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .navigation-bar-items > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #df1883;
+  }
+  .navigation-bar-items > li:not(:last-child) {
+    border-bottom: 1px solid #8e0f53;
+  }
 }
 
