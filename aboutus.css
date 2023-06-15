@@ -1,0 +1,16 @@
+.about-us-section {
+    padding: 40px;
+}
+
+.about-us-section h1 {
+    font-size: 32px;
+    color: #D3155D;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #503b36;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,42 @@
+.feedback-section {
+    padding: 40px;
+}
+
+.feedback-section h1 {
+    font-size: 32px;
+    color: #D3155D;
+    margin-bottom: 20px;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button[type="submit"] {
+    background-color: #D3155D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #df1883;
+}
