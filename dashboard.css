@@ -3,6 +3,7 @@ body{
   margin: 0;
   margin-top: 60px;
   background-color: floralwhite;
+  box-sizing: border-box;
   /*#D3155D*/
   width: 100%;
   z-index: 999;
