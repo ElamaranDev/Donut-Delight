@@ -82,8 +82,11 @@ header{
 .navigation-item a{
     display: inline-block;
 }
-#search-icon, #profile-icon, #cart-icon{
+#search-icon, #profile-icon{
     height: 20px;
+}
+#cart-icon{
+    height: 25px;
 }
 .cart{
     position: relative;
@@ -92,9 +95,10 @@ header{
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 3px;
-    left: 15px;
-    font-size: 10px;
+    top: 0px;
+    left: 18px;
+    font-size: 14px;
+    font-weight: bolder;
     color: white;
     width: 18px;
 
@@ -316,4 +320,7 @@ header{
             color: white;
             background-color: #df1883;
          }
+         #search-icon, #profile-icon, #cart-icon{
+            height: 20px;
+        }
     }

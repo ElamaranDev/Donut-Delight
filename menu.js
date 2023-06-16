@@ -147,7 +147,7 @@ addToCategory4();
 addToCategory5();
 
 // Adding event listener to search bar
-const inputItem = document.querySelector('.search-bar');
+const inputItem = document.querySelector('.input-field');
 const MenuItemsList = document.querySelectorAll('.category-element');
 const productNames = document.querySelectorAll('.product-name');
 let categoryCounts = {}; // Object to store category counts
@@ -246,7 +246,6 @@ function hideEmptyCategoryDivs() {
     noItemsMessage.style.display = 'none';
   }
 }
-
 
 //Adding items to cart
 const cartCount = document.querySelector('.cart-count');
