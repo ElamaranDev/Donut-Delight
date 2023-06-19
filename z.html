@@ -1,0 +1,36 @@
+<div class="item">
+    <span>Item Name</span>
+    <input type="number" class="quantity-input" value="1">
+    <button class="update-button">Update</button>
+    <button class="delete-button">Delete</button>
+  </div>
+  
+  <script>
+    const items = document.getElementsByClassName('item');
+  
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      const quantityInput = item.querySelector('.quantity-input');
+      const updateButton = item.querySelector('.update-button');
+      const deleteButton = item.querySelector('.delete-button');
+  
+      quantityInput.dataset.initialQuantity = quantityInput.value;
+  
+      updateButton.addEventListener('click', function() {
+        if (updateButton.innerHTML === 'Update') {
+          quantityInput.disabled = false;
+          updateButton.innerHTML = 'Save';
+        } else {
+          const updatedQuantity = parseInt(quantityInput.value);
+          // Save the updated quantity
+          quantityInput.disabled = true;
+          updateButton.innerHTML = 'Update';
+        }
+      });
+  
+      deleteButton.addEventListener('click', function() {
+        item.remove();
+      });
+    }
+  </script>
+  
