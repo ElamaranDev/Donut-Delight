@@ -52,7 +52,7 @@ function addToCategory1(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-price="${item.price}" data-item-img="${item.image}" data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -72,7 +72,7 @@ function addToCategory2(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-price="${item.price}" data-item-img="${item.image}" data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -92,7 +92,7 @@ function addToCategory3(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-price="${item.price}" data-item-img="${item.image}" data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -113,7 +113,7 @@ function addToCategory4(){
                           <span class="product-name">${item.name}</span>
                           <span class="product-price">₹${item.price}</span>
                       </div>
-                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
+                      <button data-item-price="${item.price}" data-item-img="${item.image}" data-item-name="${item.name}" id="img1-add-btn" class="add-btn">ADD</button>
                   </div>`;
    }
   });
@@ -133,7 +133,7 @@ function addToCategory5(){
                           <span class="product-name">${item.name}</span>
                           <span data-item-price="item-price" class="product-price">₹${item.price}</span>
                       </div>
-                      <button data-item-name="${item.name}" id="img1-add-btn" class="add-btn add-to-cart-btn">ADD</button>
+                      <button data-item-price="${item.price}" data-item-img="${item.image}" data-item-name="${item.name}" id="img1-add-btn" class="add-btn add-to-cart-btn">ADD</button>
                   </div>`;
    }
   });
@@ -249,12 +249,14 @@ function hideEmptyCategoryDivs() {
 
 //Adding items to cart
 const cartCount = document.querySelector('.cart-count');
+const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 document.querySelectorAll('.add-btn')
  .forEach((button, index) => {
     button.addEventListener('click', () => {
         button.innerHTML = "ADDED";
         const addedItem = button.dataset.itemName;
-        
+        const addedItemImage =button.dataset.itemImg;
+        const addedItemPrice = button.dataset.itemPrice;
         let matchingItem;
         cartItems.forEach((item) => {
             if(addedItem === item.productName)
@@ -268,21 +270,28 @@ document.querySelectorAll('.add-btn')
         else {
           cartItems.push({
             productName : addedItem,
-            quantity : 1
+            quantity : 1,
+            image: addedItemImage,
+            price: addedItemPrice
           });
         }
-        updateCartQuantity(); 
+        updateCartQuantity();
     });
 });
+window.addEventListener('load', updateCartQuantity());
 function updateCartQuantity(){
-  const cartCount = document.querySelector('.cart-count');
-    let quantity = 0;
-    cartItems.forEach( item => {
-     quantity += item.quantity;
-    });
-    cartCount.innerHTML = quantity;
+      const cartCount = document.querySelector('.cart-count');
+        let quantity = 0;
+        cartItems.forEach( item => {
+         quantity += item.quantity;
+        });
+        saveCartItems();
+        cartCount.innerHTML = quantity;   
+    }
+function saveCartItems(){
+  localStorage.setItem('cart', JSON.stringify(cartItems));
 }
-
-
-
-
+const cartBtn = document.querySelector('.cart');
+cartBtn.addEventListener('click', ()=>{
+  window.location.href = "cart.html";
+});
