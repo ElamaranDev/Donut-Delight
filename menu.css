@@ -135,7 +135,13 @@ header{
 }
 @media (max-width: 395px){
     .search-bar input{
-        max-width: 120px;
+        max-width: 100px;
+    }
+    .search-bar #search-icon{
+        margin: 0;
+    }
+    .search{
+        max-width: 300px;
     }
     .search-bar input::placeholder {
         white-space: nowrap; 

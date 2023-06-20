@@ -14,11 +14,16 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height: 60px;
     border-bottom: 1px solid rgb(213, 213, 213);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+header h1{
+    font-size: 1.75rem;
+    margin-left: 20px;
+    font-style: italic;
 }
 main{
     display: flex;
@@ -30,7 +35,7 @@ main{
 }
 .cart-items{
     display: flex;
-    width: 500px;
+    width: 450px;
     height: auto;
     margin-right: 20px;
     flex-direction: column;
@@ -51,10 +56,11 @@ width: 200px;
 }
 .cart-item .product-info{
     font-size: 1rem;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    margin-left: 5px;
 }
 .product-info .name-price{
     display: flex;
@@ -98,9 +104,7 @@ width: 200px;
 .quantity .update-clicked{
     -moz-appearance: button;
 }
-.quantity{
-    margin-top: 5px;
-}
+
 .quantity button{
     padding: 4px 8px;
     font-weight: 400;
@@ -110,13 +114,19 @@ width: 200px;
     color: white;
     cursor: pointer;
 }
+.quantity button:hover{
+    opacity: 0.8;
+}
+.quantity button:active{
+    opacity: 0.5;
+}
 .order-info{
     margin-top: 5px;
     padding: 15px;
     border: 1px solid rgb(203, 203, 203);
     border-radius: 10px;
     width: 300px;
-    height: 250px;
+    height: 230px;
 }
 .order-info div{
     display: flex;
@@ -135,11 +145,21 @@ width: 200px;
     color: white;
     cursor: pointer;
 }
+.order-info .order-btn:hover{
+    opacity: 0.8;
+}
+.order-info .order-btn:active{
+    opacity: 0.5;
+}
 .order-info #line{
     margin-top: 10px;
     height: 1px;
     margin-bottom: 10px;
     color: rgb(223, 223, 223);
+}
+.order-info #total-amount-lable, #total-amount{
+    color: red;
+    font-weight: 600;
 }
 @media screen and (max-width: 875px){
     main{
@@ -155,5 +175,10 @@ width: 200px;
     }
     .quantity button{
         margin-top: 10px;
+    }
+}
+@media screen and (max-width: 575px){
+    header h1{
+        font-size: 1rem;
     }
 }

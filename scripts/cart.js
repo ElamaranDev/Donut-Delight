@@ -56,7 +56,7 @@ function deleteCartItem(index){
 }
 
 function calculateCost(){
-    const itemsCount = document.querySelector('#item-count');
+    const itemsCount = document.querySelector('#item-count-lable');
     const itemPrice = document.querySelector('#item-price');
     const tax = document.querySelector('#tax-amount');
     const total = document.querySelector('#total-amount');
