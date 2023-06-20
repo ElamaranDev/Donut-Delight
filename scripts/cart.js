@@ -21,7 +21,7 @@ function renderCart() {
         </div>`;
   });
   document.querySelector(".js-cart-items").innerHTML = cartHTML;
-
+  
   // Attach event listeners to update buttons
   const updateButtons = document.querySelectorAll(".update-btn");
   updateButtons.forEach((updateBtn, index) => {
@@ -48,6 +48,13 @@ function renderCart() {
     });
   });
   calculateCost();
+  const noItems = document.querySelector(".noItems");
+  if (cartItems.length > 0) {
+    noItems.style.display = 'none';
+  }
+  else{
+    noItems.style.display = 'flex';
+  }
 }
 
 function deleteCartItem(index) {
