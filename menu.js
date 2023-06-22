@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // looping through the items array to display the items in menu page
 
-// adding category 1 elements in menu page
+// adding category 1 elements in menu page 
 
 function addToCategory1(){
   let itemsHTML = '';
