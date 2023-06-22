@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>cart</title>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <div class="order-info">
+            <h4>Order Summary</h4>
+            <div class="items-price">
+                <span id="item-count">items(2):</span>
+                <span id="item-price">₹900</span>
+            </div>
+            <div class="delivery-charge">
+                <span>delivery charge:</span>
+                <span id="delivery-charge">0</span>
+            </div>
+            <div class="tax">
+                <span id="tax">Tax(5%):</span>
+                <span id="tax-amount">₹48</span>
+            </div>
+            <hr id="line">
+            <div class="total">
+                <span>Total:</span>
+                <span id="total-amount">₹988</span>
+            </div>
+            <button class="order-btn">Place order</button>
+        </div>
+        <div class="cart-items js-cart-items">
+        </div>
+    </main>
+</body>
+<script src="scripts/cart.js"></script>
+</html>
