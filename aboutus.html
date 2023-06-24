@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="styles/aboutus.css">
 </head>
 <body>
-    <header class="header">
+    <section class="header">
         <div class="header_logo">
-            <p>Donut Delight</p>
+          Donut Delight
         </div>
-        <div class="navigation-bar">
-            <ul class="navigation-bar-items">
-                <li id="home"><a href="dashboard.html">Home</a></li>
-                <li id="about-us" class="active">About-Us</li>
-                <li id="menu"><a href="menu.html">Menu</a></li>
-                <li id="feedback"><a href="feedback.html">Feedback</a></li>
-                <li id="takeaway-button">Takeaway</li>
-            </ul>
-        </div>  
-    </header>
-
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="navigation-bar-items">
+            <a href="index.html"><li id="home">Home</li></a>
+            <a href="aboutus.html"><li id="about-us">About-Us</li></a>
+            <a href="menu.html"><li id="menu">Menu</li></a>
+            <a href="feedback.html"><li id="feedback">Feedback</li></a>
+            <a href="locateus.html"><li id="takeaway-button">Takeaway</li></a>
+        </ul>
+    </section>
     <section class="about-us-section">
         <h1>About Us</h1>
          <p>Welcome to our website! We are a dedicated team of professionals passionate about providing high-quality services to our customers. With years of experience in the industry, we strive to exceed customer expectations and deliver outstanding results.</p>
