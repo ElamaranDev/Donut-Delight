@@ -27,7 +27,8 @@
                 </li>
                 <li id="profile" class="navigation-item profile">
                     <a href="#">
-                        <img id="profile-icon" src="icons/profile-icon.png" alt="profile-icon">
+                        Login
+                        <!-- <img id="profile-icon" src="icons/profile-icon.png" alt="profile-icon"> -->
                     </a>
                 </li>
             </ul>
@@ -104,6 +105,33 @@
                      <!-- contains all the items in this category -->
                      <!-- div is category-element -->
                 </div>
+        </div>
+        <div data-status="not-active" class="login-signup-popup js-login-active">
+            <div class="close-btn">
+                <img id="close-btn" src="icons/close.png" alt="close-btn-icon">
+            </div>
+            <div class="username js-login-clicked">
+                <label for="name">Username</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="email js-login-clicked">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example123@gmail.com">
+            </div>
+            <div class="mobile-number login-active" id="mobile">
+                <label id="phone-lable">Phone Number</label>
+                <span>+91</span>
+                <input id="phone-no" type="tel" maxlength="10" pattern="[0-9]" required>
+            </div>
+            <!-- <span>or</span> -->
+            <!-- <div class="google-btn">
+                <img id="google-img" src="icons/google logo.png" alt="google icon">
+                <button id="google-btn">Continue with google</button>
+            </div> -->
+            <div class="login-signup-btn">
+                <button class="login">Login</button>
+                <button class="signup active">Sign Up</button>
+            </div>
         </div>
     </main>
 </body>
