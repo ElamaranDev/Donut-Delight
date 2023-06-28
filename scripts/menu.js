@@ -329,14 +329,14 @@ function toggleBtn(button) {
     username.classList.toggle("username");
     email.classList.toggle("email");
     loginActive.style.marginTop = "80px";
-    loginPopUp.style.height = "400px";
+    loginPopUp.style.height = "380px";
     signUpBtn.classList.remove("active");
     loginBtn.classList.add("active");
   } else if (loginBtn.classList.contains("active") && button === "signup") {
     username.classList.toggle("username");
     email.classList.toggle("email");
     loginActive.style.marginTop = "50px";
-    loginPopUp.style.height = "550px";
+    loginPopUp.style.height = "430px";
     signUpBtn.classList.add("active");
     loginBtn.classList.remove("active");
   }
