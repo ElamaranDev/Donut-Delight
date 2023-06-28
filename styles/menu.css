@@ -487,6 +487,14 @@ main .contents {
     color: white;
     background-color: #df1883;
   }
+  .login-signup-popup {
+    width: 350px;
+    height: 500px;
+    top: 20%;
+    left: 5%;
+    right: 20%;
+  }
+
   #search-icon,
   #profile-icon {
     height: 20px;
