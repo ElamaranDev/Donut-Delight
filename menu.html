@@ -106,7 +106,7 @@
                      <!-- div is category-element -->
                 </div>
         </div>
-        <div data-status="not-active" class="login-signup-popup js-login-active">
+        <dialog data-modal data-status="not-active" class="login-signup-popup js-login-active">
             <div class="close-btn">
                 <img id="close-btn" src="icons/close.png" alt="close-btn-icon">
             </div>
@@ -123,16 +123,11 @@
                 <span>+91</span>
                 <input id="phone-no" type="tel" maxlength="10" pattern="[0-9]" required>
             </div>
-            <!-- <span>or</span> -->
-            <!-- <div class="google-btn">
-                <img id="google-img" src="icons/google logo.png" alt="google icon">
-                <button id="google-btn">Continue with google</button>
-            </div> -->
             <div class="login-signup-btn">
                 <button class="login">Login</button>
                 <button class="signup active">Sign Up</button>
             </div>
-        </div>
+        </dialog>
     </main>
 </body>
 <script src="data/Menuitems.js"></script>

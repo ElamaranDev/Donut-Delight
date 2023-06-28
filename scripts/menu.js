@@ -329,20 +329,20 @@ function toggleBtn(button) {
     username.classList.toggle("username");
     email.classList.toggle("email");
     loginActive.style.marginTop = "80px";
-    loginPopUp.style.height = '400px';
+    loginPopUp.style.height = "400px";
     signUpBtn.classList.remove("active");
     loginBtn.classList.add("active");
   } else if (loginBtn.classList.contains("active") && button === "signup") {
     username.classList.toggle("username");
     email.classList.toggle("email");
     loginActive.style.marginTop = "50px";
-    loginPopUp.style.height = '550px';
+    loginPopUp.style.height = "550px";
     signUpBtn.classList.add("active");
     loginBtn.classList.remove("active");
   }
 }
 
-const numericInput = document.getElementById('phone-no');
-numericInput.addEventListener('input', function(e) {
-  this.value = this.value.replace(/\D/g, '');
+const numericInput = document.getElementById("phone-no");
+numericInput.addEventListener("input", function (e) {
+  this.value = this.value.replace(/\D/g, "");
 });
