@@ -241,7 +241,7 @@ main {
   border: 1px solid rgb(203, 203, 203);
   border-radius: 10px;
   width: 300px;
-  height: auto;
+  height: 300px;
 }
 .order-info div {
   display: flex;
