@@ -203,6 +203,7 @@ main {
 }
 .quantity .update {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 .quantity .update-clicked {
   display: inline-block;
@@ -218,6 +219,7 @@ main {
 }
 .quantity .update-clicked {
   -moz-appearance: button;
+  appearance: button;
 }
 
 .quantity button {
