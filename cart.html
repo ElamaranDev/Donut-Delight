@@ -7,9 +7,22 @@
     <title>cart</title>
 </head>
 <body>
-    <header>
-        <h1>Donut Delight</h1>
-    </header>
+    <section class="header">
+        <div class="header_logo">
+          Donut Delight
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="navigation-bar-items">
+          <a href="index.html"><li id="home">Home</li></a>
+          <a href="aboutus.html"><li id="about-us">About-Us</li></a>
+          <a href="menu.html"><li id="menu">Menu</li></a>
+          <a href="feedback.html"><li id="feedback">Feedback</li></a>
+          <a href="locateus.html"><li id="takeaway-button">Takeaway</li></a>
+        </ul>
+    </section>
     <label id="checkout-lable"></label>
     <main>
         <div class="order-info">

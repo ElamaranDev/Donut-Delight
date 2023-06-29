@@ -95,8 +95,7 @@ function calculateCost() {
 }
 
 // payment button
-const buttonColor = "#df1883";
-
+const orderSummary = document.querySelector('.order-info');
 paypal
   .Buttons({
     style: {
@@ -104,6 +103,7 @@ paypal
       shape: "pill",
     },
     createOrder: function (data, actions) {
+      orderSummary.style.height = 'auto';
       return actions.order.create({
         purchase_units: [
           {
@@ -116,6 +116,8 @@ paypal
     },
     onApprove: function (data, actions) {
       return actions.order.capture().then(function (details) {
+
+        orderSummary.style.height = 'auto';
         window.location.href = "paymentSuccess.html";
         localStorage.setItem("cart", JSON.stringify([]));
       });
@@ -125,3 +127,7 @@ paypal
     },
   })
   .render("#paypal-buttons");
+
+
+
+
