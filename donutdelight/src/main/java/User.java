@@ -16,7 +16,11 @@ public class User {
 
     
     // Constructors, getters, and setters
-
+    // Default constructor
+    public User() {
+        // Empty constructor needed for JPA
+    }
+    
     public User(Long id, String username, String email, String phoneNumber) {
         this.id = id;
         this.username = username;

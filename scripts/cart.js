@@ -21,7 +21,7 @@ function renderCart() {
         </div>`;
   });
   document.querySelector(".js-cart-items").innerHTML = cartHTML;
-  
+
   // Attach event listeners to update buttons
   const updateButtons = document.querySelectorAll(".update-btn");
   updateButtons.forEach((updateBtn, index) => {
@@ -50,10 +50,9 @@ function renderCart() {
   calculateCost();
   const noItems = document.querySelector(".noItems");
   if (cartItems.length > 0) {
-    noItems.style.display = 'none';
-  }
-  else{
-    noItems.style.display = 'flex';
+    noItems.style.display = "none";
+  } else {
+    noItems.style.display = "flex";
   }
 }
 
@@ -91,4 +90,38 @@ function calculateCost() {
   tax.innerHTML = `₹${Math.floor(taxAmount)}`;
   total.innerHTML = `₹${Math.floor(totalCost)}`;
   deliveryCharge.innerHTML = totalCost !== 0 ? `₹40` : `₹0`;
+
+  return totalCost;
 }
+
+// payment button
+const buttonColor = "#df1883";
+
+paypal
+  .Buttons({
+    style: {
+      color: "gold",
+      shape: "pill",
+    },
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [
+          {
+            amount: {
+              value: Math.floor(calculateCost() / 82),
+            },
+          },
+        ],
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function (details) {
+        window.location.href = "paymentSuccess.html";
+        localStorage.setItem("cart", JSON.stringify([]));
+      });
+    },
+    onCancel: function (data) {
+      window.location.href = "paymentCancelled.html";
+    },
+  })
+  .render("#paypal-buttons");

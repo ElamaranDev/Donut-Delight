@@ -164,30 +164,12 @@ main {
   border: 1px solid rgb(203, 203, 203);
   border-radius: 10px;
   width: 300px;
-  height: 230px;
+  height: auto;
 }
 .order-info div {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-}
-.order-info .order-btn {
-  margin-top: 20px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  height: 30px;
-  font-weight: bold;
-  background-color: #df1883;
-  color: white;
-  cursor: pointer;
-}
-.order-info .order-btn:hover {
-  opacity: 0.8;
-}
-.order-info .order-btn:active {
-  opacity: 0.5;
 }
 .order-info #line {
   margin-top: 10px;
@@ -215,7 +197,7 @@ main {
   .quantity button {
     margin-top: 10px;
   }
-  .noItems{
+  .noItems {
     position: relative;
     top: 0;
     left: 0;
@@ -226,7 +208,7 @@ main {
   header h1 {
     font-size: 1rem;
   }
-  header{
+  header {
     padding: 10px;
   }
 }
