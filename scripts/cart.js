@@ -22,6 +22,9 @@ function renderCart() {
   });
   document.querySelector(".js-cart-items").innerHTML = cartHTML;
 
+
+  const orderSummary = document.querySelector('.order-info')
+
   // Attach event listeners to update buttons
   const updateButtons = document.querySelectorAll(".update-btn");
   updateButtons.forEach((updateBtn, index) => {
