@@ -106,30 +106,69 @@
                      <!-- div is category-element -->
                 </div>
         </div>
-        <dialog data-modal data-status="not-active" class="login-signup-popup js-login-active">
-            <div class="close-btn">
-                <img id="close-btn" src="icons/close.png" alt="close-btn-icon">
-            </div>
-            <div class="username js-login-clicked">
-                <label for="name">Username</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="email js-login-clicked">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example123@gmail.com">
-            </div>
-            <div class="mobile-number login-active" id="mobile">
-                <label id="phone-lable">Phone Number</label>
-                <span>+91</span>
-                <input id="phone-no" type="tel" maxlength="10" pattern="[0-9]" required>
-            </div>
-            <div class="login-signup-btn">
-                <button class="login">Login</button>
-                <button class="signup active">Sign Up</button>
-            </div>
-        </dialog>
+        <form action="" id="user-form">
+            <dialog data-modal data-status="not-active" class="login-signup-popup js-login-active">
+                <div class="close-btn">
+                    <img id="close-btn" src="icons/close.png" alt="close-btn-icon">
+                </div>
+                <div class="username js-login-clicked">
+                    <label for="name">Username</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="email js-login-clicked">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example123@gmail.com">
+                </div>
+                <div class="mobile-number login-active" id="mobile">
+                    <label id="phone-lable">Phone Number</label>
+                    <span>+91</span>
+                    <input id="phone-no"  maxlength="10" required>
+                </div>
+                <div class="login-signup-btn">
+                    <button class="login">Login</button>
+                    <button class="signup active" type="submit">Sign Up</button>
+                </div>
+            </dialog>
+        </form>
+        
+        
     </main>
 </body>
+
 <script src="data/Menuitems.js"></script>
 <script src="scripts/menu.js"></script>
+<script>
+    document.getElementById("user-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+
+        var user = {
+            username: username,
+            email: email,
+            phoneNumber: phoneNumber
+        };
+
+        fetch("/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        .then(function(response) {
+            if (response.ok) {
+                alert("User created successfully!");
+                document.getElementById("user-form").reset();
+            } else {
+                alert("Failed to create user.");
+            }
+        })
+        .catch(function(error) {
+            alert("An error occurred: " + error.message);
+        });
+    });
+</script>
 </html>
